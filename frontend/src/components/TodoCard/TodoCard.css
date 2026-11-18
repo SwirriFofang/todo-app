@@ -1,0 +1,127 @@
+.todo-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+
+.todo-card.is-completed {
+  background: var(--hover);
+}
+
+.todo-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.todo-title {
+  font-size: 15px;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.is-completed .todo-title {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.status-badge {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.status-pending {
+  background: var(--orange-bg);
+  color: var(--orange-text);
+}
+
+.status-completed {
+  background: var(--green-bg);
+  color: var(--green-text);
+}
+
+.todo-desc {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--muted);
+  word-break: break-word;
+}
+
+.todo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.todo-date,
+.priority {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.todo-date.overdue {
+  color: var(--danger);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.dot-high {
+  background: #dc2626;
+}
+.dot-medium {
+  background: #f59e0b;
+}
+.dot-low {
+  background: #3b82f6;
+}
+
+.todo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  background: var(--border);
+}
+
+.action-btn.danger {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.todo-card.compact .todo-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -1,0 +1,136 @@
+.datepicker {
+  position: relative;
+}
+
+.datepicker-input {
+  cursor: pointer;
+  padding-right: 38px;
+}
+
+.datepicker-icon {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.calendar {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  min-width: 290px;
+  padding: 12px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.cal-selects {
+  display: flex;
+  gap: 6px;
+}
+
+.cal-select {
+  height: 32px;
+  padding: 0 6px;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+  font-size: 13px;
+}
+
+.cal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.cal-nav:hover {
+  background: var(--hover);
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  text-align: center;
+}
+
+.cal-weekdays {
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.cal-day {
+  height: 34px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.cal-day:hover {
+  background: var(--hover);
+}
+
+.cal-day.today {
+  outline: 1.5px solid var(--blue);
+}
+
+.cal-day.selected {
+  background: var(--primary);
+  color: #fff;
+}
+
+.cal-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.cal-link {
+  border: none;
+  background: transparent;
+  color: var(--blue);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.cal-day:disabled {
+  color: var(--muted);
+  opacity: 0.35;
+  cursor: not-allowed;
+  background: transparent;
+}
+
+.cal-nav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.cal-nav:disabled:hover {
+  background: transparent;
+}
